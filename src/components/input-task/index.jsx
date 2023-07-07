@@ -1,4 +1,3 @@
-import DateTimePicker from "@react-native-community/datetimepicker";
 import { Button, Text, TextInput, View } from "react-native";
 
 import { styles } from "./styles";
@@ -9,14 +8,12 @@ const InputTask = ({
   onHanderBlur,
   onHandlerChangeText,
   task,
-  onHandlerCreateTasks,
-  dateClass,
+  onHandlerCreateTasks
 }) => {
   return (
     <View style={styles.container}>
       <View style={{ ...styles.inputContainer, marginBottom: 10 }}>
         <Text style={styles.inputHeaderText}>Task Name:</Text>
-        <Text style={{ ...styles.inputHeaderText, marginLeft: 130 }}>Task Due Date:</Text>
       </View>
       <View style={styles.inputContainer}>
         <TextInput
@@ -32,7 +29,6 @@ const InputTask = ({
           onChangeText={onHandlerChangeText}
           value={task}
         />
-        <DateTimePicker value={dateClass} />
       </View>
       <Button
         title="Create"
